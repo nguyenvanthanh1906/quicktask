@@ -1,0 +1,4 @@
+.invalid-page-number {
+    pointer-events: none;
+    color: grey
+}

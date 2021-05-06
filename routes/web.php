@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TasksController;
+use App\Http\Controllers\I18nController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::group(['prefix' => '{locale}'], function() {
+    config(['app.locale' => Request::segment(1)]);
+    Route::resource('tasks', TasksController::class)->only(['index']);;
 });
