@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TasksController;
+use App\Http\Controllers\I18nController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['middleware' => 'i18n'], function() {
+    Route::resource('tasks', TasksController::class)->only(['index']);;
+});
+Route::get('i18n/{language}', [I18nController::class, 'i18n']);
