@@ -14,7 +14,8 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::paginate(5);
+        $limit = config('app.limit');
+        $tasks = Task::paginate($limit);
 
         return view('Tasks.index', compact('tasks'));
     }

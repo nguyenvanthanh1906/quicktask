@@ -18,7 +18,7 @@ use App\Http\Controllers\I18nController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['middleware' => 'i18n'], function() {
+Route::group(['prefix' => '{locale}'], function() {
+    config(['app.locale' => Request::segment(1)]);
     Route::resource('tasks', TasksController::class)->only(['index']);;
 });
-Route::get('i18n/{language}', [I18nController::class, 'i18n']);
