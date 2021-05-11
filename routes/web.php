@@ -20,5 +20,5 @@ Route::get('/', function () {
 });
 Route::group(['prefix' => '{locale}'], function() {
     config(['app.locale' => Request::segment(1)]);
-    Route::resource('tasks', TasksController::class)->only(['index']);;
+    Route::resource('tasks', TasksController::class)->only(['index', 'create', 'store']);;
 });

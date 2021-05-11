@@ -4,7 +4,7 @@
   <div class="container">
       @include('common.notification')
       <h2>{{ trans('localization.taskslist') }}</h2>
-      <a href="./tasks/create" class="btn btn-primary float-right">{{ trans('localization.newtask')}}</a>
+      <a href="{{ Route('tasks.create', ['locale' => Request::segment(1)]) }}" class="btn btn-primary float-right">{{ trans('localization.newtask')}}</a>
       <table class="table">
         <thead>
           <tr>

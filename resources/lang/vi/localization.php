@@ -11,5 +11,7 @@ return [
     'edit' => 'Sửa',
     'vietnamese' => 'Tiếng Việt',
     'enslish' => 'Tiếng Anh',
-    'languagelist' => 'Ngôn ngữ'
+    'languagelist' => 'Ngôn ngữ',
+    'addtask' => 'Thêm công việc',
+    'task' => 'Công việc'
 ];
