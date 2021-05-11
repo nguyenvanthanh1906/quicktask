@@ -13,5 +13,8 @@ return [
     'english' => 'English',
     'languagelist' => 'Language',
     'addtask' => 'Add Task',
-    'task' => 'Task'
+    'task' => 'Task',
+    'updatetask' => 'Update Task',
+    'edittask' => 'Edit Task',
+    'noexittask' => 'Task do not exit'
 ];
