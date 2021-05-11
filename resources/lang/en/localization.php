@@ -11,5 +11,7 @@ return [
     'edit' => 'Edit',
     'vietnamese' => 'Vietnamese',
     'english' => 'English',
-    'languagelist' => 'Language'
+    'languagelist' => 'Language',
+    'addtask' => 'Add Task',
+    'task' => 'Task'
 ];
