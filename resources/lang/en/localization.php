@@ -13,5 +13,6 @@ return [
     'english' => 'English',
     'languagelist' => 'Language',
     'addtask' => 'Add Task',
-    'task' => 'Task'
+    'task' => 'Task',
+    'deletesuccess' => 'Delete task successfully'
 ];

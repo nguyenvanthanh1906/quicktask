@@ -13,5 +13,7 @@ return [
     'enslish' => 'Tiếng Anh',
     'languagelist' => 'Ngôn ngữ',
     'addtask' => 'Thêm công việc',
-    'task' => 'Công việc'
+    'task' => 'Công việc',
+    'deletesuccess' => 'Xóa task thành công'
+
 ];
