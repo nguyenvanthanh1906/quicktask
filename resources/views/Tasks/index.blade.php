@@ -19,7 +19,7 @@
             <td>{{$key + 1}}</td>
             <td>{{$task->name}}</td>
             <td>
-              <a href="./tasks/edit/{{$task->id}}" class="btn btn-success">{{ trans('localization.edit') }}</a>
+              <a href="{{ Route('tasks.edit', ['task' => $task->id, 'locale' => Request::segment(1)])}}" class="btn btn-success">{{ trans('localization.edit') }}</a>
               <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal{{$task->id}}">{{ trans('localization.delete') }}</button>
               <div class="modal" id="myModal{{$task->id}}">
                 <div class="modal-dialog">
