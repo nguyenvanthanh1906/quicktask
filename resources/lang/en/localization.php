@@ -14,6 +14,7 @@ return [
     'languagelist' => 'Language',
     'addtask' => 'Add Task',
     'task' => 'Task',
+    'deletesuccess' => 'Delete task successfully'
     'updatetask' => 'Update Task',
     'edittask' => 'Edit Task',
     'noexittask' => 'Task do not exit'

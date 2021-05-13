@@ -28,7 +28,7 @@
                       {{ trans('localization.suredelete') }}
                     </div>
                     <div class="modal-footer">
-                      <form action="./tasks/delete/{{$task->id}}" method="post">
+                      <form action="{{ route('tasks.destroy', ['locale' => Request::segment(1), 'task' => $task->id]) }}" method="post">
                         {{ csrf_field() }}
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">{{ trans('localization.delete') }}</button>

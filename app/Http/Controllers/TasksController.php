@@ -87,8 +87,16 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $task = Task::find($request->task);
+        if($task) {
+            $task->delete();
+
+            return redirect()->route('tasks.index', ['locale' => $request->locale])->with('success', trans('localization.deletesuccess'));
+        } else {
+            
+            return redirect()->route('tasks.index', ['locale' => $request->locale])->with('error', trans('localization.noexittask'));
+        }
     }
 }
