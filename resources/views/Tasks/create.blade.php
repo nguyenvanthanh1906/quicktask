@@ -7,9 +7,11 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="task" class="col-sm-3 control-label">{{ trans('localization.task')}}</label>
-
                 <div class="col-sm-6">
-                    <input type="text" name="name" id="task-name" class="form-control">
+                    <input type="text" name="name" id="task-name" class="form-control @error('name') is-invalid @enderror">
+                    @error('name')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
             <div class="form-group">

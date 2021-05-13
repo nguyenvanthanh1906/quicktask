@@ -14,8 +14,11 @@ return [
     'languagelist' => 'Language',
     'addtask' => 'Add Task',
     'task' => 'Task',
-    'deletesuccess' => 'Delete task successfully'
+    'deletesuccess' => 'Delete task successfully',
     'updatetask' => 'Update Task',
     'edittask' => 'Edit Task',
-    'noexittask' => 'Task do not exit'
+    'noexittask' => 'Task do not exit',
+    'createsuccess' => 'Create new task successfully',
+    'createfail' => 'Can not create task',
+    'namerequired' => 'Name can not required',
 ];

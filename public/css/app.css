@@ -2,3 +2,6 @@
     pointer-events: none;
     color: grey
 }
+.error {
+    color: red;
+} 

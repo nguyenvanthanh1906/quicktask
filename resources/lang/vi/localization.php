@@ -14,8 +14,11 @@ return [
     'languagelist' => 'Ngôn ngữ',
     'addtask' => 'Thêm công việc',
     'task' => 'Công việc',
-    'deletesuccess' => 'Xóa task thành công'
+    'deletesuccess' => 'Xóa task thành công',
     'updatetask' => 'Thay đổi công việc',
     'edittask' => 'Sửa công việc',
-    'noexittask' => 'Công việc không tồn tại'
+    'noexittask' => 'Công việc không tồn tại',
+    'createsuccess' => 'Tạo mới công việc thành công',
+    'createfail' => 'Không thể tạo mới công việc',
+    'namerequired' => 'Tên công việc không được bỏ trống',
 ];
