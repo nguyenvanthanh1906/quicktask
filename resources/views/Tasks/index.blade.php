@@ -42,6 +42,6 @@
           @endforeach
         </tbody>
       </table>
-      {{$tasks->render('common.pagination')}}
+      {{$tasks->links()}}
     </div>
 @endsection
