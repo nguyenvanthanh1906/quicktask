@@ -57,9 +57,16 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $task = Task::find($request->segment(3));
+        if ($task) {
+
+            return view('Tasks.edit', compact('task'));
+        } else {
+
+            return redirect()->route('tasks.index', ['locale' => $request->segment(1)])->with('error', trans('localization.noexittask'));
+        }
     }
 
     /**

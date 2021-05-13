@@ -13,5 +13,8 @@ return [
     'enslish' => 'Tiếng Anh',
     'languagelist' => 'Ngôn ngữ',
     'addtask' => 'Thêm công việc',
-    'task' => 'Công việc'
+    'task' => 'Công việc',
+    'updatetask' => 'Thay đổi công việc',
+    'edittask' => 'Sửa công việc',
+    'noexittask' => 'Công việc không tồn tại'
 ];
