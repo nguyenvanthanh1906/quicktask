@@ -21,4 +21,5 @@ return [
     'createsuccess' => 'Create new task successfully',
     'createfail' => 'Can not create task',
     'namerequired' => 'Name can not required',
+    'updatesuccess' => 'Update task successfully',
 ];
