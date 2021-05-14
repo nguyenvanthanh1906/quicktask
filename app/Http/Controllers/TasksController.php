@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Http\Requests\TasksRequest;
 
 class TasksController extends Controller
 {
@@ -35,9 +36,17 @@ class TasksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TasksRequest $request)
     {
-        //
+        $data = $request->all();
+        $task = Task::create($data);
+        if ($task) {
+
+            return redirect()->route('tasks.index', ['locale' => $request->segment(1)])->with('success', trans('localization.createsuccess'));
+        } else {
+
+            return redirect()->route('tasks.index', ['locale' => $request->segment(1)])->with('error', trans('localization.createfail'));
+        }
     }
 
     /**
