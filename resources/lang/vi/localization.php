@@ -14,7 +14,7 @@ return [
     'languagelist' => 'Ngôn ngữ',
     'addtask' => 'Thêm công việc',
     'task' => 'Công việc',
-    'deletesuccess' => 'Xóa task thành công'
+    'deletesuccess' => 'Xóa task thành công',
     'updatetask' => 'Thay đổi công việc',
     'edittask' => 'Sửa công việc',
     'noexittask' => 'Công việc không tồn tại'
