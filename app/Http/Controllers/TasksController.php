@@ -85,9 +85,19 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TasksRequest $request)
     {
-        //
+        $data = $request->all();
+        $task = Task::find($request->task);
+        if ($task) {
+            $task->name = $data['name'];
+            $task->save();
+
+            return redirect()->route('tasks.index', ['locale' => $request->locale])->with('success', trans('localization.updatesuccess'));
+        } else {
+
+            return redirect()->route('tasks.index', ['locale' => $request->locale])->with('error', trans('localization.noexittask'));
+        }
     }
 
     /**

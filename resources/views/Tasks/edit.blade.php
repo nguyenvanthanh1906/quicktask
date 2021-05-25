@@ -8,7 +8,10 @@
             <div class="form-group">
                 <label for="task" class="col-sm-3 control-label">{{ trans('localization.edittask')}}</label>
                 <div class="col-sm-6">
-                    <input type="text" name="name" id="task-name" class="form-control" value="{{$task->name}}">
+                    <input type="text" name="name" id="task-name" class="form-control @error('name') is-invalid @enderror" value="{{$task->name}}">
+                    @error('name')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
             <div class="form-group">

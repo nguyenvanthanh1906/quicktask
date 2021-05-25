@@ -21,4 +21,5 @@ return [
     'createsuccess' => 'Tạo mới công việc thành công',
     'createfail' => 'Không thể tạo mới công việc',
     'namerequired' => 'Tên công việc không được bỏ trống',
+    'updatesuccess' => 'Cập nhật công việc thành công',
 ];
